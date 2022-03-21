@@ -3,7 +3,7 @@ from GlobalVariable import globalVariables as gbv
 import re
 import time
 import argparse
-
+from Log import logger
 
 #
 
@@ -61,12 +61,14 @@ if __name__ == "__main__":
     parser.add_argument('-p', '--proxy', type=str, help='--proxy http://127.0.0.1:8080   ', default=False)
     args = parser.parse_args()
     gbv.proxy = args.proxy
-
+    if(gbv.proxy and "https" in gbv.proxy):
+        logger.info("无效的协议 {}".format(gbv.proxy))
+        exit()
     url = ParaInit(args.url, args.thread, args.deep, args.all, args.fuzz).main()
 
     begin = time.time()
     Pupil().main()
     times = time.time() - begin
-    print("总耗时{} s".format(times))
+    logger.info("总耗时{} s".format(times))
 
 # export excel

@@ -29,7 +29,10 @@ class Track:
 
         if self.proxy:
             #print(self.proxy)
-            scheme = parse.urlparse(gbv.proxy).scheme
+            if("https" in gbv.url):
+                scheme = parse.urlparse(gbv.proxy).scheme+"s"
+            else:
+                scheme = parse.urlparse(gbv.proxy).scheme
             self.proxy={scheme:self.proxy}
         self.requests = HTMLSession(verify=False)
 
@@ -37,7 +40,7 @@ class Track:
     def req(self, url):
         try:
 
-            response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy,timeout=5)
+            response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy,timeout=5,verify=False)
             # 将成功查询的url记录进history表，一方面输出做结果，另一方面防止重复查询
             gbv.trackhistory.append(url)
             content=SerachData.DataHandler(url, response).main()
@@ -71,15 +74,23 @@ class Track:
             # 因为这个渲染是异步操作，不好用线程，所以单独提取出来，显得有点冗余。
             if (gbv.trackdeep == 1):
                 url = deepurl[0]
-                response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy, verify=False, timeout=5)
+                response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy, timeout=5)
                 #response = self.requests.get(url=url, headers=self.headers, verify=False,timeout=5)
+                first=response.html.html
+                gbv.trackhistory.append(url)
+                #不渲染操作一次
+                SerachData.DataHandler(url, response).main()
                 #渲染的疑难杂症，不行就不渲染了。
                 try:
-                    response.html.render(timeout=5)
+                    response.html.render(sleep=5)
+                    second=response.html.html
+                    #渲染再操作一次,看看渲染后能不能获取更多数据
+                    if(len(second)-len(first)>100):
+                        SerachData.DataHandler(url, response).main()
                 except:
                     pass
-                gbv.trackhistory.append(url)
-                SerachData.DataHandler(url, response).main()
+
+
 
             # 罗志祥模式（多线程）
             else:

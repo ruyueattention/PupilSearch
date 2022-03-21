@@ -116,7 +116,7 @@ class DataHandler:
     def search_url(self):
         # 提取url中的域名，后续用于判断url结果是否该用于回溯
         host = parse.urlparse(self.url).netloc
-        blacklist = [".png", ".gif", ".css", ".jpg", ".video", ".mp4",".ico",".ttf",".svg",".woff2",".woff",".m4s"]
+        blacklist = [".png", ".gif", ".css", ".jpg", ".video", ".mp4",".ico",".ttf",".svg",".woff2",".woff",".m4s",".svg&quot"]
         pattern = re.compile(r"(https?|ftp|file|ssh|smb|mysql)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]")
         urllist = self.search_data(pattern)
         # 去除一些外部站点的引用
