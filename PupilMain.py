@@ -11,7 +11,6 @@ class ParaInit():
     def __init__(self, url, thread, trackdeep, mode, fuzz):
         # 该有的/不能少，比如目标域名是aaa.com/sso/ ，不能偷懒为aaa.com/sso
         self.url = url
-        gbv.url=url
         gbv.thread = thread
         gbv.track = []  # 动态添加
         gbv.track.append([])
@@ -41,6 +40,7 @@ class ParaInit():
 
     def main(self):
         self.url_handler()
+        gbv.url=self.url
         return self.url
 
 
@@ -59,7 +59,9 @@ if __name__ == "__main__":
     parser.add_argument('-a', '--all', type=bool, help='-a False    add all url to check list', default=False)
     parser.add_argument('-f', '--fuzz', type=bool, help='-f False    add api to check list', default=False)
     parser.add_argument('-p', '--proxy', type=str, help='--proxy http://127.0.0.1:8080   ', default=False)
+    parser.add_argument('-timeout', '--timeout', type=int, help='--timeout 10  超时时间设置', default=5)
     args = parser.parse_args()
+    gbv.timeout = args.timeout
     gbv.proxy = args.proxy
     if(gbv.proxy and "https" in gbv.proxy):
         logger.info("无效的协议 {}".format(gbv.proxy))

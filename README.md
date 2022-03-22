@@ -2,6 +2,12 @@
 
 PupilSearch本质上就是一个爬虫，能够自动帮我们查询搜索web前端中泄露的信息。包括api接口、url、各种敏感信息（JWT TOKEN、IP、Email、Phone、身份证、AccessKey、SecretKey、APPID、UserName、Password、SSHKey、RSAKey）。
 
+该爬虫已应用于Kunyu ，感谢风起。
+
+https://github.com/knownsec/Kunyu
+
+
+
 其工作流程大致如下:
 
 

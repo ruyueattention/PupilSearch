@@ -90,7 +90,8 @@ class DataHandler:
             # 或者我们不管了，全都查
             else:
                 url = script_item.attrs["src"]
-            gbv.track[gbv.trackdeep].append(url)
+            if url not in gbv.track[gbv.trackdeep]:
+                gbv.track[gbv.trackdeep].append(url)
 
     # 寻找接口，主要是寻找js里面的，html里面不太准确，并且基本也没接口
     def search_api(self):

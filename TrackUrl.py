@@ -36,16 +36,23 @@ class Track:
             self.proxy={scheme:self.proxy}
         self.requests = HTMLSession(verify=False)
 
+    #长度转换 b to kb mb。。
+    def hum_convert(self,value):
+        units = ["B", "KB", "MB", "GB", "TB", "PB"]
+        size = 1024.0
+        for i in range(len(units)):
+            if (value / size) < 1:
+                return "%.2f%s" % (value, units[i])
+            value = value / size
     # requests请求方法
     def req(self, url):
         try:
-
-            response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy,timeout=5,verify=False)
+            response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy,timeout=gbv.timeout,verify=False)
             # 将成功查询的url记录进history表，一方面输出做结果，另一方面防止重复查询
             gbv.trackhistory.append(url)
-            content=SerachData.DataHandler(url, response).main()
+            logger.info('req is {}  {}  {}'.format(url,response.status_code,self.hum_convert(len(response.html.html))))
 
-            logger.info('req is {}  {}  {}'.format(url,response.status_code,content))
+            SerachData.DataHandler(url, response).main()
 
 
             return response
@@ -74,22 +81,23 @@ class Track:
             # 因为这个渲染是异步操作，不好用线程，所以单独提取出来，显得有点冗余。
             if (gbv.trackdeep == 1):
                 url = deepurl[0]
-                response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy, timeout=5)
-                #response = self.requests.get(url=url, headers=self.headers, verify=False,timeout=5)
+
+                response = self.requests.get(url=url, headers=self.headers, proxies=self.proxy, timeout=gbv.timeout)
+                #response = self.requests.get(url=url, headers=self.headers, verify=False,gbv.timeout=5)
                 first=response.html.html
                 gbv.trackhistory.append(url)
                 #不渲染操作一次
                 SerachData.DataHandler(url, response).main()
                 #渲染的疑难杂症，不行就不渲染了。
+
                 try:
-                    response.html.render(sleep=5)
+                    response.html.render(sleep=gbv.timeout,timeout=gbv.timeout)
                     second=response.html.html
                     #渲染再操作一次,看看渲染后能不能获取更多数据
                     if(len(second)-len(first)>100):
                         SerachData.DataHandler(url, response).main()
                 except:
                     pass
-
 
 
             # 罗志祥模式（多线程）
