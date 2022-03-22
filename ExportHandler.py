@@ -16,7 +16,7 @@ class Export:
         # 定义输出execel的一些东西
         file = Workbook(encoding='utf-8')
         table = file.add_sheet('data')  # sheet名
-        work_dir = os.getcwd()
+        work_dir = os.path.split(os.path.realpath(__file__))[0]
         filename = parse.urlparse(gbv.url).netloc
         filename = re.split(":", filename)[0]
         for i, p in enumerate(ldata):
