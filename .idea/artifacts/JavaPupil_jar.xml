@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaPupil:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaPupil_jar</output-path>
+    <root id="archive" name="JavaPupil.jar">
+      <element id="module-output" name="JavaPupil" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/net/sourceforge/htmlunit/htmlunit/2.70.0/htmlunit-2.70.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/alibaba/easyexcel-core/3.2.1/easyexcel-core-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/websocket/websocket-api/9.4.50.v20221201/websocket-api-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/poi/poi-ooxml/4.1.2/poi-ooxml-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/commons/commons-compress/1.19/commons-compress-1.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.70.0/htmlunit-core-js-2.70.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/net/sourceforge/htmlunit/neko-htmlunit/2.70.0/neko-htmlunit-2.70.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/beust/jcommander/1.82/jcommander-1.82.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/net/sourceforge/htmlunit/htmlunit-xpath/2.70.0/htmlunit-xpath-2.70.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/httpcomponents/httpmime/4.5.14/httpmime-4.5.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/websocket/websocket-client/9.4.50.v20221201/websocket-client-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/jetty-http/9.4.50.v20221201/jetty-http-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/github/virtuald/curvesapi/1.06/curvesapi-1.06.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/xmlbeans/xmlbeans/3.1.0/xmlbeans-3.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/poi/poi-ooxml-schemas/4.1.2/poi-ooxml-schemas-4.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/commons-io/commons-io/2.10.0/commons-io-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/jetty-util/9.4.50.v20221201/jetty-util-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/shapesecurity/salvation2/3.0.1/salvation2-3.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/websocket/websocket-common/9.4.50.v20221201/websocket-common-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/jetty-client/9.4.50.v20221201/jetty-client-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/brotli/dec/0.1.2/dec-0.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/squareup/okio/okio/1.8.0/okio-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/squareup/okhttp3/okhttp/3.3.0/okhttp-3.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/alibaba/easyexcel/3.2.1/easyexcel-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/com/alibaba/easyexcel-support/3.2.1/easyexcel-support-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/net/sourceforge/htmlunit/htmlunit-cssparser/1.14.0/htmlunit-cssparser-1.14.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/ehcache/ehcache/3.9.9/ehcache-3.9.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/eclipse/jetty/jetty-io/9.4.50.v20221201/jetty-io-9.4.50.v20221201.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/commons/commons-csv/1.8/commons-csv-1.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../E/JavaIdea/repository/org/apache/poi/poi/4.1.2/poi-4.1.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
